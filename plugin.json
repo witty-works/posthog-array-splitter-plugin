@@ -1,0 +1,27 @@
+{
+  "name": "Array Splitter",
+  "url": "https://github.com/witty-works/posthog-array-splitter-plugin",
+  "description": "This PostHog plugin will create new events for any array elements at the specified location with the JSON of a specific event type.",
+  "main": "index.js",
+  "config": [
+    {
+      "markdown": "\n\n# Important!\nThis plugin will only work on events ingested **after** the plugin was enabled. This means it **will** register events as being the first if there were events that occured **before** it was enabled. To mitigate this, you could consider renaming the relevant events and creating an [action](https://posthog.com/docs/features/actions) that matches both the old event name and the new one.\n"
+    },
+    {
+      "key": "json_path",
+      "name": "JSON Path:",
+      "type": "string",
+      "default": "",
+      "hint": "The object properties to the array contained within the JSON separated with a dot, f.e. `foo.bar`",
+      "required": true
+    },
+    {
+      "key": "event_name",
+      "name": "Event Name:",
+      "type": "string",
+      "default": "",
+      "hint": "The name of the event which should be created for each array element at the JSON path.",
+      "required": true
+    }
+  ]
+}

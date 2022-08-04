@@ -1,0 +1,24 @@
+{
+    "name": "array-splitter-plugin",
+    "version": "1.1.0",
+    "description": "This PostHog plugin will create new events for any array elements at the specified location with the JSON of a specific event type.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/witty-works/posthog-array-splitter-plugin.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest ."
+    },
+    "bugs": {
+        "url": "https://github.com/witty-works/posthog-array-splitter-plugin/issues"
+    },
+    "homepage": "https://github.com/witty-works/posthog-array-splitter-plugin#readme",
+    "devDependencies": {
+        "@posthog/plugin-scaffold": "^0.12.10",
+        "jest": "^27.5.1",
+        "posthog-plugins": "^0.2.2"
+    }
+}
